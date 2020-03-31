@@ -3,9 +3,9 @@ import requests
 from vk_api.utils import get_random_id
 
 
-Lonin = input('Login')
-Password = input('Password')
-Vk_token = input('Vk_token')
+Lonin = input('Login: ')
+Password = input('Password: ')
+Vk_token = input('Vk_token: ')
 
 
 session = requests.Session()

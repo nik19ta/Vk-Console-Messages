@@ -4,9 +4,9 @@ from vk_api.longpoll import VkLongPoll, VkEventType
 from vk_api.utils import get_random_id
 
 
-Lonin = input('Login')
-Password = input('Password')
-Vk_token = input('Vk_token')
+Lonin = input('Login: ')
+Password = input('Password: ')
+Vk_token = input('Vk_token: ')
 
 session = requests.Session()
 vk_session = vk_api.VkApi(Lonin, Password)
@@ -24,7 +24,7 @@ for event in longpoll.listen():
     if event.type == VkEventType.MESSAGE_NEW and event.to_me and event.text:
 
         print(event.type)
-        
+
         # получаем данные о пользователе
         user_data = vk.users.get(user_ids = event.user_id)
         UserID = user_data[0]["id"]
