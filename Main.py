@@ -19,7 +19,7 @@ class Main:
         self.Vk_token = Vk_token
 
 
-Config = Main('89646997211','Sekret2807','6b91ae2108d55802d080998f92bcbf2e86752dde82068115c018af24a7b510507a01fa33bf4e84df1510e')
+Config = Main('login','Password','Vk_token')
 
 session = requests.Session()
 vk_session = vk_api.VkApi(Config.Lonin, Config.Password)
