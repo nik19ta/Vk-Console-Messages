@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ru" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital@1&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div class="chat">
+      <div class="users-list">
+        <div class="message">
+          <a href="/">Вернутся к Диалогам</a>
+        </div>
+        {% for i in chats %}
+        <div class="message">
+          <p> {{i.from_id}}: </p>
+          <p class="text" > {{i.text}} </p>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+
+  </body>
+</html>
+
+<style media="screen">
+  .text{
+    margin-left: 10px;
+  }
+  body {
+      margin: 0px;
+      background: #edeef0;
+      overflow-x: hidden;
+      font-family: 'Roboto', sans-serif;
+  }
+  .users-list {
+    width: 600px;
+    height: auto;
+  }
+  .chat{
+    width: 100vw;
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .message{
+    width: 100%;
+    height: 50px;
+    background: #fff;
+    margin: 2px;
+    display: flex;
+    padding: 10px;
+  }
+</style>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Chat vk</title>
+     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital@1&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div class="chat">
+      <div class="users-list">
+          {% for i in chats %}
+          <div class="user">
+            <p>User: {{i.conversation.peer.id}} </p>
+            <p>last message:  {{i.last_message.text}} </p>
+          </div>
+          {% endfor %}
+      </div>
+    </div>
+</body>
+</html>
+<style scoped>
+body {
+    margin: 0px;
+    background: #edeef0;
+    overflow-x: hidden;
+    font-family: 'Roboto', sans-serif;
+}
+.chat {
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+}
+
+.chat-content {
+  width: 550px;
+  background: #ffffff;
+  border: solid 1px #dbdbdb;
+  position: relative;
+}
+
+.users-list {
+  width: 600px;
+  height: auto;
+}
+.user{
+  width: 100%;
+  min-height: 60px;
+  background: #fff;
+  margin: 5px;
+  padding: 1px;
+  padding-left: 10px;
+}
+
+</style>
